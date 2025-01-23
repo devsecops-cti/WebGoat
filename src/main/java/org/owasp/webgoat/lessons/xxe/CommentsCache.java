@@ -95,9 +95,10 @@ public class CommentsCache {
     }
 
     var xsr = xif.createXMLStreamReader(new StringReader(xml));
+    var xmlStreamReader = xif.createXMLStreamReader(new StringReader(xml));
 
     var unmarshaller = jc.createUnmarshaller();
-    return (Comment) unmarshaller.unmarshal(xsr);
+    return (Comment) unmarshaller.unmarshal(xmlStreamReader);
   }
 
   public void addComment(Comment comment, WebGoatUser user, boolean visibleForAllUsers) {
