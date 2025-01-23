@@ -16,7 +16,7 @@ on:
 
 jobs:
     build:
-        runs-on: ubuntu-latest
+        runs-on: ubuntu-22.04
         # display name of the job
         name: "Robot framework test"
         steps:
